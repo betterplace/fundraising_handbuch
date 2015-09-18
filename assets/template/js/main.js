@@ -23,13 +23,14 @@ var site = function () {
 		var twitterStr = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(twitterText) + '&url=' + encodeURIComponent(twitterURL);
 		
 		$('.social-icons .twitter a').click(function (e) {
+			ga('send', 'event', 'share', 'twitter', 'footer', 1);
 			e.preventDefault();
 			window.open(twitterStr);
 		});
 		
 		// facebook
-		
 		$('.social-icons .facebook a').click(function (e) {
+			ga('send', 'event', 'share', 'facebook', 'footer', 1);
 			e.preventDefault();
 			window.open('https://www.facebook.com/sharer/sharer.php?u=http://www.fundraising-handbuch.org');
 		});
@@ -41,6 +42,7 @@ var site = function () {
 		var emailStr ='mailto:' + encodeURIComponent(emailAddress) + '?subject=' + encodeURIComponent(emailSubject) + '&body=' + encodeURIComponent(emailBody);
 		
 		$('.social-icons .email a').click(function (e) {
+			ga('send', 'event', 'share', 'email', 'footer', 1);
 			e.preventDefault();
 			window.location.href = emailStr;
 		});
