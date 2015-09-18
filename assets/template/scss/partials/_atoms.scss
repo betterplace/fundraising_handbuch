@@ -1,0 +1,122 @@
+body {
+	font-family: aleo-light, serif;
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 26px;
+	text-align: center;
+	color: $color-grey-dark;
+	background-color: $color-grey-light;
+}
+
+.logo {
+	width: 283px;
+	height: 80px;
+	margin: 0 auto;
+	text-indent: -9999px;
+	background-image: url(../media/logo@2x.png);
+	background-size: 283px 47px;
+	background-position: 0 20px;
+}
+
+h2 {
+	font-size: 28px;
+	font-weight: 300;
+	line-height: 33px;
+	margin-top: 50px;
+	margin-bottom: 40px;
+	display: inline-block;
+	position: relative;
+}
+
+p {
+	margin-bottom: 26px;
+}
+
+ul {
+	margin-bottom: 26px;
+}
+
+strong, b {
+	font-family: aleo-regular;
+	font-weight: normal;
+	color: $color-green-dark;
+}
+	
+a {
+	font-family: aleo-regular;
+	text-decoration: none;
+	color: $color-green-dark;
+	transition: color 250ms linear;
+	transition: background 250ms linear;
+	
+	&:hover {
+		text-decoration: underline;
+	}
+	
+	&.cta-btn {
+		font-family: 'Open Sans', sans-serif;
+		color: $color-white;
+		display: block;
+		padding: 17px 30px;
+		background-color: $color-purple;
+		
+		&:hover {
+			text-decoration: none;
+			background-color: $color-purple-dark;
+		}
+	}
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+}
+
+hr {
+	border-bottom: 1px solid $color-grey-dark;
+	margin-bottom: 15px;
+}
+
+/* tablets and up */
+@media (min-width: $screen-sm-min) {
+	
+	.logo {
+		width: 377px;
+		height: 90px;
+		background-size: 377px 63px;
+		background-position: 0 15px;
+	}
+	
+	h2 {
+		line-height: 33px;
+		padding: 0 95px;
+		display: inline-block;
+		position: relative;
+		
+		span {
+			padding: 0 25px;
+			display: inline-block;
+			position: relative;
+			z-index: 2;
+			background-color: $color-grey-light;
+		}
+		
+		&:after {
+			content: "";
+			height: 1px;
+			position: absolute;
+			top: 50%;
+			right: 0;
+			left: 0;
+			border-top: 1px solid $color-grey-dark;
+		}
+	}
+
+}
+
+/* desktops and up */
+@media (min-width: $screen-md-min) {
+	
+}
