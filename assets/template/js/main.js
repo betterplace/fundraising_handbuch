@@ -7,6 +7,7 @@ var site = function () {
 		
 		toggleTouchClass();
 		toggleImprint();
+		initDropdown();
 		initSocialButtons();
 	};
 	
@@ -47,6 +48,28 @@ var site = function () {
 			window.location.href = emailStr;
 		});
 		
+	};
+	
+	var initDropdown = function() {
+		if ($('html').is('.is-touch')) {
+			$('nav.dropdown .dropdown-header').on('click', function () {
+				$(this).parent().toggleClass('open')
+			});
+			$('body').on('touchstart', function (e) {
+				if (!$.contains($('nav.dropdown')[0], e.originalEvent.changedTouches[0].target)) {
+					$('nav.dropdown').removeClass('open');
+				}
+			});
+		} else {
+			$('nav.dropdown').hover (
+				function() {
+					$(this).addClass('open');
+				},
+				function() {
+					$(this).removeClass('open');
+				}
+			);
+		}
 	};
 	
 	var toggleImprint = function() {

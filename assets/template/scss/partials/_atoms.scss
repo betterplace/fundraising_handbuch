@@ -52,19 +52,6 @@ a {
 	&:hover {
 		text-decoration: underline;
 	}
-	
-	&.cta-btn {
-		font-family: 'Open Sans', sans-serif;
-		color: $color-white;
-		display: block;
-		padding: 17px 30px;
-		background-color: $color-purple;
-		
-		&:hover {
-			text-decoration: none;
-			background-color: $color-purple-dark;
-		}
-	}
 }
 
 img {
