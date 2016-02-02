@@ -66,6 +66,24 @@ hr {
 	margin-bottom: 15px;
 }
 
+blockquote {
+	font-size: 20px;
+	line-height: 28px;
+	margin-bottom: 10px;
+}
+
+.author {
+	font-size: 14px;
+	line-height: 18px;
+	display: inline-block;
+	font-style: italic;
+
+	&:not(:last-of-type) {
+		padding-bottom: 30px;
+		border-bottom: 1px solid darken($color-grey-light, 7%);
+	}
+}
+
 /* tablets and up */
 @media (min-width: $screen-sm-min) {
 	
