@@ -1,2 +1,3 @@
 assets/template/scss/.sass-cache
 _site/**
+.DS_Store
